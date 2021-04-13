@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree example</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+   function BinaryTree(value) {
+        this.left = null;
+        this.right = null;
+        this.value = value;
+        this.depth = 1;
+    }  
+
+    function printAncestors(root, target) {
+        //  Your code here  //
+    }
+    
+    //Create a binary tree with test data
+    var myTree = new BinaryTree(1, '');
+    myTree.right = new BinaryTree(2, '');
+    myTree.right.right = new BinaryTree(5, '');
+    myTree.left = new BinaryTree(12, '');
+    myTree.left.left = new BinaryTree(7, '');
+
+    printAncestors(myTree, 7)
+</script>
