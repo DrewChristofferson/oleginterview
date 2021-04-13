@@ -11,13 +11,23 @@
 <script>
     let testArray = [2, 6, 8, 43, 5, 89];
     let testArray2 = [5, 76, 4, 35, 3, 34, 54, 65, 6, 0]
-    
+    let testArray3 = [1,2,3];
     function reverseArray(array) {
        // Your code here //
+       let temp = null;
+       let end = array.length - 1;
+       let start = 0;
+       while (start < end) {
+           temp = array[start];
+           array[start] = array[end];
+           array[end] = temp;
+           start++;
+           end--;
+       }
        return array
    }
 
-   console.log(reverseArray(testArray));
-   console.log(reverseArray(testArray2));
-
+//    console.log(reverseArray(testArray));
+//    console.log(reverseArray(testArray2));
+   console.log(reverseArray(testArray3));
 </script>

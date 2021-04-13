@@ -19,6 +19,28 @@
     function printAncestors(root, target) {
         //  Your code here  //
     }
+
+    function findNode(root, value) {
+        node = root;
+        if (node.value === value) {
+            console.log(node.value)
+            return;
+        }
+        while (node.left || node.right) {
+            if (findNode(node.left, value) || findNode(node.right, value)) {
+                return node.left;
+            } else {
+                findNode(node.left, value);
+            }
+
+            if (node.right === value) {
+                return node.right;
+            } else {
+                findNode(node.right, value);
+            }
+        }
+    }
+    
     
     //Create a binary tree with test data
     var myTree = new BinaryTree(1, '');
